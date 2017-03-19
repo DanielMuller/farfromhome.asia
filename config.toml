@@ -1,0 +1,64 @@
+title = "Ang Mo in Singapore"
+baseURL = "https://farfromhome.asia/"
+languageCode = "en-us"
+theme = "campser"
+[permalinks]
+    post = '/:year/:month/:slug/'
+[author]
+    name = "Daniel Muller"
+    bio = ""
+    location = "Singapore"
+    website = "https://daniel.ctrlaltdel.ch"
+    thumbnail = "/avatars/daniel.jpg"
+[params]
+    description = "Living in a country far far away"
+    cover = "/layout/cover_singapore.jpg"
+    cover_sizes = [1920, 1280, 720, 360]
+    cover_density = [1, 2, 3]
+    cover_webp = true
+    logo = "/logos/favicon-120x120.png"
+    linkedinName = 'DanielMullerCH'
+    githubName = 'DanielMuller'
+    twitterName = 'DanielMullerCH'
+    pinterestName = 'danielmullerch'
+    googlePlusName = 'DanielMullerToo'
+
+    ampElements = ["amp-accordion","amp-analytics", "amp-sidebar"]
+    themeColor = "#ffffff"
+    googleanalytics = "UA-1341906-9"
+
+[params.share]
+    twitter = true
+    gplus = true
+    pinterest = true
+    facebook = true
+
+[params.favicon]
+    manifest = "manifest.json"
+    basename = "/logos/favicon"
+    ms_tilecolor = "#FFFFFF"
+    icon = [16, 32, 96, 192]
+    apple_touch = [57, 60, 72, 76, 114, 120, 144, 152, 180]
+    ms = [144]
+    ms_config = "browserconfig.xml"
+
+[[menu.main]]
+    name = 'Home'
+    weight = 1
+    url = '/'
+
+[[menu.main]]
+    pre = "Links"
+    name = 'Follow me'
+    weight = 210
+    url = 'https://daniel.ctrlaltdel.ch/'
+
+[[menu.main]]
+    name = 'My photo gallery'
+    weight = 220
+    url = 'https://daniel.mesphotos.ch/'
+
+[[menu.main]]
+    name = 'My technical blog'
+    weight = 230
+    url = 'https://danielmuller.me/'
