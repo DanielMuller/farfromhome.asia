@@ -18,6 +18,7 @@ excerpt = "In Summer 2011, a big decision was taken: We are going to move to Sin
   height="250"
   layout="fixed"
 >}}
+
 In Summer 2011, a big decision was taken: We are going to move to Singapore !
 
 The place was not totally unknown. My wife started working there temporarily during 8 month when we decided to move for real. During her small stay, I had the chance to stay there twice for one month, diving into a different culture on step at a time.
