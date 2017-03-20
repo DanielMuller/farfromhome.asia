@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "hugo:server": "hugo server --buildDrafts --buildFuture",
-    "build:prod": "gulp images && hugo && npm run optimize:html",
     "deploy": "npm run build:prod && npm run s3_sync",
     "s3_sync": "aws --region us-west-2 --profile farfromhome s3 sync --exclude .gitkeep --cache-control 'max-age=31536000' --storage-class REDUCED_REDUNDANCY i--acl public-read public/ s3://farfromhome.asia/",
+    "build:prod": "gulp images && hugo && npm run optimize:html && find public/images/ -name *.png -exec pngquant --verbose --force --out {} {} \\;",
     "optimize:html": "./node_modules/.bin/html-minifier --input-dir ./public/ --output-dir ./public/ --file-ext html -c ./.html-minifier-config.json"
   },
   "repository": {
