@@ -51,6 +51,7 @@ gulp.task('img-layout', function () {
       skipOnEnlargement: false,
       errorOnEnlargement: false
     }))
+  .pipe($.imagemin())
   .pipe(gulp.dest('static/layout/'))
 })
 gulp.task('img-content', function () {
@@ -65,6 +66,7 @@ gulp.task('img-content', function () {
       skipOnEnlargement: true,
       errorOnEnlargement: false
     }))
+  .pipe($.imagemin())
   .pipe(gulp.dest('static/images/'))
 })
 

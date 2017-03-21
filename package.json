@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "hugo:server": "hugo server --buildDrafts --buildFuture",
-    "build:prod": "gulp images && hugo && npm run optimize:html && find public/images/ -name *.png -exec pngquant --verbose --force --out {} {} \\;",
+    "build:prod": "npm run images && hugo && npm run optimize:html",
+    "images": "gulp images",
     "deploy": "npm run build:prod && npm run s3_sync && npm run cf_invalidate_html",
     "s3_sync": "aws --region us-west-2 --profile farfromhome s3 sync --exclude .gitkeep --cache-control 'max-age=31536000' --storage-class REDUCED_REDUNDANCY --acl public-read public/ s3://farfromhome.asia/",
     "cf_invalidate_html": "aws --profile farfromhome cloudfront create-invalidation --distribution-id E31P5SGMZMYNB0 --paths '/*/' '/*.html' '/*.xml'",
@@ -28,6 +29,7 @@
   "homepage": "https://github.com/DanielMuller/farfromhome.asia#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.1.1",
     "gulp-load-plugins": "^1.5.0",
     "gulp-responsive": "^2.7.0",
     "html-minifier": "^3.4.1"
