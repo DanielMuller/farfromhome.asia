@@ -51,6 +51,7 @@ function buildOutputs (sizes, resolutions) {
 
 gulp.task('img-layout', function () {
   return gulp.src(layoutSrc + '/**/*.{jpg,png}')
+    .pipe($.changed(layoutDst))
     .pipe($.responsive({
       '**/*': buildOutputs([360, 720, 1280, 1920], [1, 2, 3])
     }, {
@@ -80,6 +81,7 @@ gulp.task('img-layout', function () {
 })
 gulp.task('img-content', function () {
   return gulp.src(contentSrc + '/**/*.{jpg,png}')
+    .pipe($.changed(contentDst))
     .pipe($.responsive({
       '**/*': buildOutputs([150, 360, 720, 1280, 1920, 3840], [1])
     }, {
@@ -109,3 +111,12 @@ gulp.task('img-content', function () {
 })
 
 gulp.task('images', ['img-layout', 'img-content'])
+gulp.task('img-layout:clean', function () {
+  return gulp.src(layoutDst, {read: false})
+    .pipe($.clean())
+})
+gulp.task('img-content:clean', function () {
+  return gulp.src(contentDst, {read: false})
+    .pipe($.clean())
+})
+gulp.task('images:clean', ['img-layout:clean', 'img-content:clean'])
