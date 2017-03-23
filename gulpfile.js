@@ -1,5 +1,15 @@
-var gulp = require('gulp')
-var $ = require('gulp-load-plugins')()
+const gulp = require('gulp')
+const $ = require('gulp-load-plugins')()
+
+// image lossy compression plugins
+const compressJpg = require('imagemin-jpeg-recompress')
+const pngquant = require('imagemin-pngquant-gfw')
+
+const layoutSrc = 'images-src/layout'
+const layoutDst = 'static/layout'
+const contentSrc = 'images-src/content'
+const contentDst = 'static/images'
+const pngFilter = $.filter(['**/*.png'], {restore: true})
 
 function buildOutputs (sizes, resolutions) {
   var outputs = []
@@ -40,7 +50,7 @@ function buildOutputs (sizes, resolutions) {
 }
 
 gulp.task('img-layout', function () {
-  return gulp.src('images-src/layout/**/*.{jpg,png}')
+  return gulp.src(layoutSrc + '/**/*.{jpg,png}')
     .pipe($.responsive({
       '**/*': buildOutputs([360, 720, 1280, 1920], [1, 2, 3])
     }, {
@@ -49,13 +59,27 @@ gulp.task('img-layout', function () {
       withMetadata: false,
       withoutenlargement: true,
       skipOnEnlargement: false,
-      errorOnEnlargement: false
+      errorOnEnlargement: false,
+      errorOnUnusedConfig: false
     }))
-  .pipe($.imagemin())
-  .pipe(gulp.dest('static/layout/'))
+    .pipe($.imagemin([
+      $.imagemin.gifsicle(),
+      compressJpg({
+        loops: 4,
+        min: 50,
+        max: 95,
+        quality: 'high'
+      }),
+      $.imagemin.optipng(),
+      $.imagemin.svgo()
+    ]))
+    .pipe(pngFilter)
+    .pipe(pngquant({ quality: '65-80', speed: 4 })())
+    .pipe(pngFilter.restore)
+  .pipe(gulp.dest(layoutDst))
 })
 gulp.task('img-content', function () {
-  return gulp.src('images-src/content/**/*.{jpg,png}')
+  return gulp.src(contentSrc + '/**/*.{jpg,png}')
     .pipe($.responsive({
       '**/*': buildOutputs([150, 360, 720, 1280, 1920, 3840], [1])
     }, {
@@ -64,10 +88,24 @@ gulp.task('img-content', function () {
       withMetadata: false,
       withoutenlargement: true,
       skipOnEnlargement: true,
-      errorOnEnlargement: false
+      errorOnEnlargement: false,
+      errorOnUnusedConfig: false
     }))
-  .pipe($.imagemin())
-  .pipe(gulp.dest('static/images/'))
+    .pipe($.imagemin([
+      $.imagemin.gifsicle(),
+      compressJpg({
+        loops: 4,
+        min: 50,
+        max: 95,
+        quality: 'high'
+      }),
+      $.imagemin.optipng(),
+      $.imagemin.svgo()
+    ]))
+    .pipe(pngFilter)
+    .pipe(pngquant({ quality: '65-80', speed: 4 })())
+    .pipe(pngFilter.restore)
+    .pipe(gulp.dest(contentDst))
 })
 
 gulp.task('images', ['img-layout', 'img-content'])
