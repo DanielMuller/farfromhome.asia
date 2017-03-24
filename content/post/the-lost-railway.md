@@ -8,7 +8,13 @@ tags = ['Hike', 'Nature', 'Transportation']
 excerpt = "In 2011, the only International train in Singapore was dismantled. The line leading from Tanjong-Pagar to Johor Barhu was stopped and the track removed to give way to magnificient hiking path from Tanjong Pagar to Bukit Timah, Woodlands and Johor."
 [amp]
     elements = ["amp-image-lightbox", "amp-social-share"]
-
+[article.image]
+  src = '/images/2013/05/DSC_4733'
+  author = 'Daniel Muller'
+  title = 'Old Bukit Timah Station'
+  height = 680
+  width = 1024
+  license_link = 'https://creativecommons.org/licenses/by-sa/4.0/'
 +++
 {{<amp-image-lightbox id="lightbox" >}}
 {{<amp-polaroid

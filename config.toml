@@ -30,6 +30,8 @@ theme = "campser"
     themeColor = "#ffffff"
     googleanalytics = "UA-1341906-9"
 
+    defaultSchema = "article"
+
 [params.share]
     twitter = true
     gplus = true
