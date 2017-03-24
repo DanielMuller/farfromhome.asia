@@ -1,6 +1,6 @@
 title = "Ang Mo in Singapore"
 baseURL = "https://farfromhome.asia/"
-languageCode = "en-us"
+languageCode = "en"
 theme = "campser"
 [permalinks]
     post = '/:year/:month/:slug/'
