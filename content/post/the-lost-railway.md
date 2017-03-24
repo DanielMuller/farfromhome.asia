@@ -41,6 +41,5 @@ But there is a more unknown line, still lying on and under the ground, long forg
   lightbox="lightbox"
 >}}
 
-More pictures: <a title="Lost Railway" href="http://daniel.mesphotos.ch/lost-railway" target="_blank">My photo Gallery</a>
-
-More informations: <a title="Rembember Singapore" href="http://remembersingapore.wordpress.com/singapore-railway/" target="_blank">Remember Singapore</a>
+* More pictures: <a title="Lost Railway" href="http://daniel.mesphotos.ch/lost-railway" target="_blank">My photo Gallery</a></li>
+* More informations: <a title="Rembember Singapore" href="http://remembersingapore.wordpress.com/singapore-railway/" target="_blank">Remember Singapore</a></li>
