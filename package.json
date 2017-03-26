@@ -7,12 +7,14 @@
     "hugo:server": "hugo server --buildDrafts --buildFuture",
     "build:prod": "npm run images && hugo && npm run optimize:html",
     "images": "gulp images",
-    "deploy": "npm run build:prod && npm run s3_sync_html && npm run s3_sync_images && npm run s3_sync_webp",
+    "deploy": "npm run build:prod && npm run s3_sync_html && npm run s3_sync_images && npm run s3_sync_webp && npm run s3_sync_sitemap",
     "s3_sync_html": "aws --region us-west-2 --profile farfromhome s3 sync --delete --exclude '*' --include '*.html' --include '*.xml' --cache-control 'max-age=43200' --storage-class REDUCED_REDUNDANCY --acl public-read public/ s3://farfromhome.asia/",
     "s3_sync_images": "aws --region us-west-2 --profile farfromhome s3 sync --delete  --exclude '*.webp' --exclude '*.html' --exclude '*.xml' --exclude '.gitkeep' --cache-control 'max-age=31536000' --storage-class REDUCED_REDUNDANCY --acl public-read public/ s3://farfromhome.asia/",
     "s3_sync_webp": "aws --region us-west-2 --profile farfromhome s3 sync --delete  --exclude '*' --include '*.webp' --content-type 'image/webp' --cache-control 'max-age=31536000' --storage-class REDUCED_REDUNDANCY --acl public-read public/ s3://farfromhome.asia/",
+    "s3_sync_sitemap": "aws s3 cp --profile farfromhome --storage-class REDUCED_REDUNDANCY --cache-control 'max-age=300' public/sitemap.xml s3://farfromhome.asia/sitemap.xml",
     "cf_invalidate": "aws --profile farfromhome cloudfront create-invalidation --distribution-id E31P5SGMZMYNB0 --paths '/*'",
-    "optimize:html": "./node_modules/.bin/html-minifier --input-dir ./public/ --output-dir ./public/ --file-ext html -c ./.html-minifier-config.json"
+    "optimize:html": "./node_modules/.bin/html-minifier --input-dir ./public/ --output-dir ./public/ --file-ext html -c ./.html-minifier-config.json",
+    "google_ping": "curl 'http://www.google.com/webmasters/sitemaps/ping?sitemap=https%3A%2F%2Ffarfromhome.asia%2Fsitemap.xml'"
   },
   "repository": {
     "type": "git",

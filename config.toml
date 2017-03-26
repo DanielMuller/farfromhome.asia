@@ -67,3 +67,8 @@ theme = "campser"
     name = 'My technical blog'
     weight = 230
     url = 'https://danielmuller.me/'
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
