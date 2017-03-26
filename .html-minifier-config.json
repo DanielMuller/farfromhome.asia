@@ -23,7 +23,7 @@
   "processScripts": [
     "text/html"
   ],
-  "removeAttributeQuotes": true,
+  "removeAttributeQuotes": false,
   "removeComments": true,
   "removeEmptyAttributes": false,
   "removeEmptyElements": false,
