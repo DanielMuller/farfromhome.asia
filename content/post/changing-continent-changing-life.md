@@ -4,7 +4,6 @@ author = 'Daniel'
 date = 2012-12-22T07:07:38+00:00
 categories = ['Life']
 slug = 'changing-continent-changing-life'
-excerpt = "In Summer 2011, a big decision was taken: We are going to move to Singapore ! The place was not totally unknown. My wife started working there temporarily during 8 month when we decided to move for real. During her small stay, I had the chance to stay there twice for one month, diving into a different culture on step at a time."
 [amp]
     elements = ["amp-image-lightbox","amp-social-share"]
 
@@ -21,7 +20,7 @@ excerpt = "In Summer 2011, a big decision was taken: We are going to move to Sin
 
 In Summer 2011, a big decision was taken: We are going to move to Singapore !
 
-The place was not totally unknown. My wife started working there temporarily during 8 month when we decided to move for real. During her small stay, I had the chance to stay there twice for one month, diving into a different culture on step at a time.
+The place was not totally unknown. My wife started working there temporarily during 8 month when we decided to move for real. During her small stay, I had the chance to stay there twice for one month, diving into a different culture on step at a time.<!--more-->
 
 Moving to another country or even to another continent is not that different than moving to the neighbor town. You pack all your stuff, put it in a minivan and open it again a few hours later. I just needed to pack all my stuff, put it in a sea container and open it six weeks later. If you forgot to pack something on D day, it becomes more difficult to just fetch it the next day.
 

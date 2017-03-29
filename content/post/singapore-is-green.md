@@ -4,7 +4,6 @@ author = 'Daniel'
 date = 2012-12-30T13:19:42+00:00
 categories = ['Discovery']
 tags= ['Downtown', 'Nature']
-excerpt = "For almost every European, Singapore is either a financial town with high rise buildings and men in suits, or just an airport where you can have a massage while waiting for your connecting flight to Sidney."
 [amp]
     elements = ["amp-image-lightbox", "amp-social-share"]
 
@@ -17,7 +16,7 @@ excerpt = "For almost every European, Singapore is either a financial town with 
   lightbox="lightbox"
 >}}
 
-For almost every European, Singapore is either a financial town with high rise buildings and men in suits, or just an airport where you can have a massage while waiting for your connecting flight to Sidney.
+For almost every European, Singapore is either a financial town with high rise buildings and men in suits, or just an airport where you can have a massage while waiting for your connecting flight to Sidney.<!--more-->
 
 {{<amp-polaroid
   alt="Financial district"

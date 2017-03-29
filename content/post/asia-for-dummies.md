@@ -5,12 +5,11 @@ date = 2012-12-25T13:20:01+00:00
 slug = 'asia-for-dummies'
 categories = ['Discovery']
 tags = ['Food', 'Religion', 'Transportation']
-excerpt = "Singapore is in the middle of South-East Asia, surrounded by countries like Indonesia, Malaysia, Thailand, Cambodia, Vietnam. India, China, Hong-Kong, Taïwan and Korea are not far away. But Singapore is also an (if not the) economical center of the region, attracting many international companies and foreign workers, coming along with their religions, cultures and food specialties."
 [amp]
     elements = ["amp-image-lightbox", "amp-social-share"]
 
 +++
-Singapore is in the middle of South-East Asia, surrounded by countries like Indonesia, Malaysia, Thailand, Cambodia, Vietnam. India, China, Hong-Kong, Taïwan and Korea are not far away. But Singapore is also an (if not the) economical center of the region, attracting many international companies and foreign workers, coming along with their religions, cultures and food specialties.
+Singapore is in the middle of South-East Asia, surrounded by countries like Indonesia, Malaysia, Thailand, Cambodia, Vietnam. India, China, Hong-Kong, Taïwan and Korea are not far away. But Singapore is also an (if not the) economical center of the region, attracting many international companies and foreign workers, coming along with their religions, cultures and food specialties.<!--more-->
 
 {{<amp-image-lightbox id="lightbox" >}}
 {{<amp-polaroid

@@ -5,7 +5,6 @@ date = 2013-05-04T16:09:06+00:00
 slug = 'the-lost-railway'
 categories = ['Discovery']
 tags = ['Hike', 'Nature', 'Transportation']
-excerpt = "In 2011, the only International train in Singapore was dismantled. The line leading from Tanjong-Pagar to Johor Barhu was stopped and the track removed to give way to magnificient hiking path from Tanjong Pagar to Bukit Timah, Woodlands and Johor."
 [amp]
     elements = ["amp-image-lightbox", "amp-social-share"]
 [article.image]
@@ -24,7 +23,7 @@ excerpt = "In 2011, the only International train in Singapore was dismantled. Th
   lightbox="lightbox"
 >}}
 
-In 2011, the only International train in Singapore was dismantled. The line leading from Tanjong-Pagar to Johor Barhu was stopped and the track removed to give way to magnificient hiking path from Tanjong Pagar to Bukit Timah, Woodlands and Johor.
+In 2011, the only International train in Singapore was dismantled. The line leading from Tanjong-Pagar to Johor Barhu was stopped and the track removed to give way to magnificient hiking path from Tanjong Pagar to Bukit Timah, Woodlands and Johor.<!--more-->
 
 But there is a more unknown line, still lying on and under the ground, long forgotten from most peoples, called the Jurong railway system, linking Jurong industrial estate with the Tanjong Pagar-Bukit Timah line.
 
