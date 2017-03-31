@@ -20,11 +20,8 @@ theme = "campser"
     cover_webp = true
     logo = "/logos/favicon-120x120.png"
     linkedinName = 'DanielMullerCH'
-    githubName = 'DanielMuller'
     twitterName = 'DanielMullerCH'
     pinterestName = 'danielmullerch'
-    googlePlusName = 'DanielMullerToo'
-    facebookName = 'DanielMullerCH'
 
     ampElements = ["amp-accordion","amp-analytics", "amp-sidebar"]
     themeColor = "#ffffff"
