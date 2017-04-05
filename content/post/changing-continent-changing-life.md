@@ -1,7 +1,8 @@
 +++
 title = 'Changing continent, changing life'
 author = 'Daniel'
-date = 2012-12-22T07:07:38+00:00
+date = '2012-12-22T07:07:38+00:00'
+lastmod = '2017-04-05T22:06:00+08:00'
 categories = ['Life']
 slug = 'changing-continent-changing-life'
 [amp]

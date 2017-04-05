@@ -2,6 +2,7 @@
 title = 'The lost Railway'
 author = 'Daniel'
 date = 2013-05-04T16:09:06+00:00
+lastmod = '2017-04-05T22:06:00+08:00'
 slug = 'the-lost-railway'
 categories = ['Discovery']
 tags = ['Hike', 'Nature', 'Transportation']

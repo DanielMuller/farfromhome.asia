@@ -1,7 +1,8 @@
 +++
 title = 'Singapore is green'
 author = 'Daniel'
-date = 2012-12-30T13:19:42+00:00
+date = '2012-12-30T13:19:42+00:00'
+lastmod = '2017-04-05T22:06:00+08:00'
 categories = ['Discovery']
 tags= ['Downtown', 'Nature']
 [amp]
