@@ -8,6 +8,7 @@
     "build:prod": "npm run images && hugo && npm run optimize:html",
     "images": "gulp images",
     "deploy": "npm run build:prod && npm run s3_sync_html && npm run s3_sync_images && npm run s3_sync_webp && npm run s3_sync_sitemap",
+    "s3_sync": "npm run s3_sync_html && npm run s3_sync_images && npm run s3_sync_webp && npm run s3_sync_sitemap",
     "s3_sync_html": "aws --region us-west-2 --profile farfromhome s3 sync --delete --exclude '*' --include '*.html' --include '*.xml' --cache-control 'max-age=43200' --storage-class REDUCED_REDUNDANCY public/ s3://farfromhome.asia/",
     "s3_sync_images": "aws --region us-west-2 --profile farfromhome s3 sync --delete  --exclude '*.webp' --exclude '*.html' --exclude '*.xml' --exclude '.gitkeep' --cache-control 'max-age=31536000' --storage-class REDUCED_REDUNDANCY public/ s3://farfromhome.asia/",
     "s3_sync_webp": "aws --region us-west-2 --profile farfromhome s3 sync --delete  --exclude '*' --include '*.webp' --content-type 'image/webp' --cache-control 'max-age=31536000' --storage-class REDUCED_REDUNDANCY public/ s3://farfromhome.asia/",
