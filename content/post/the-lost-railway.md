@@ -2,14 +2,14 @@
 title = 'The lost Railway'
 author = 'Daniel'
 date = 2013-05-04T16:09:06+00:00
-lastmod = '2017-04-05T22:06:00+08:00'
+lastmod = '2017-04-06T00:11:00+08:00'
 slug = 'the-lost-railway'
 categories = ['Discovery']
 tags = ['Hike', 'Nature', 'Transportation']
 [amp]
     elements = ["amp-image-lightbox", "amp-social-share"]
 [article.image]
-  src = '/images/2013/05/DSC_4733'
+  src = '/images/2013/05/DSC_4733.jpg'
   author = 'Daniel Muller'
   title = 'Old Bukit Timah Station'
   height = 680
