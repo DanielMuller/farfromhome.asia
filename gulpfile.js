@@ -10,6 +10,8 @@ const layoutDst = 'static/layout'
 const contentSrc = 'images-src/content'
 const contentDst = 'static/images'
 const pngFilter = $.filter(['**/*.png'], {restore: true})
+const nonAmpFilter = $.filter(['**', '!**/iframe/*.html'], {restore: true})
+const gulpAmpValidator = require('gulp-amphtml-validator')
 
 function buildOutputs (sizes, resolutions) {
   var outputs = []
@@ -120,3 +122,12 @@ gulp.task('img-content:clean', function () {
     .pipe($.clean())
 })
 gulp.task('images:clean', ['img-layout:clean', 'img-content:clean'])
+gulp.task('amphtml:validate', () => {
+  return gulp.src('public/**/*.html')
+    .pipe(nonAmpFilter)
+    .pipe(gulpAmpValidator.validate())
+    .pipe(gulpAmpValidator.format())
+    .pipe(nonAmpFilter.restore)
+    .pipe(gulpAmpValidator.failAfterError())
+})
+

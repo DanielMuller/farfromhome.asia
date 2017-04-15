@@ -2,3 +2,5 @@ node_modules/
 static/images/
 static/layout/
 public/
+/bin/alias/empty
+/bin/alias/push
