@@ -11,6 +11,10 @@ theme = "campser"
     website = "https://daniel.ctrlaltdel.ch"
     thumbnail = "/avatars/daniel.jpg"
     facebook = "DanielMullerCH"
+[outputs]
+    home = [ "HTML", "RSS"]
+    page = [ "HTML"]
+
 [params]
     locale = "en_US"
     description = "Living in a country far far away"
