@@ -16,7 +16,7 @@ phases:
       - mv /tmp/hugo /usr/bin/hugo
       - rm -rf /tmp/hugo*
       - curl -sL https://deb.nodesource.com/setup_6.x | sudo bash -
-      - apt-get install -y nodejs
+      - apt-get install -y nodejs openssh-client
   build:
     commands:
       - git submodule update --init --recursive
