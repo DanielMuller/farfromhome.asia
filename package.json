@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "hugo:server": "hugo server --buildDrafts --buildFuture",
-    "build:prod": "rm -rf /tmp/hugo_cache/ && rm -rf ./public && npm run images && hugo --ignoreCache && npm run optimize:html && bash bin/alias/build && npm run amphtml:validate",
     "images": "gulp images",
+    "build:prod": "rm -rf /tmp/hugo_cache/ && rm -rf ./public && npm run images && hugo --ignoreCache && npm run optimize:html && bash bin/alias/build farfromhome && npm run amphtml:validate",
     "deploy": "npm run build:prod && npm run s3_sync",
     "s3_sync": "npm run s3_sync_html && npm run s3_sync_images && npm run s3_sync_webp && npm run s3_sync_sitemap && npm run s3_sync_alias",
     "s3_sync_html": "aws --region us-west-2 --profile farfromhome s3 sync --delete --exclude '*' --include '*.html' --include '*.xml' --cache-control 'max-age=43200' --storage-class REDUCED_REDUNDANCY --acl public-read public/ s3://farfromhome.asia/",
